@@ -9,7 +9,6 @@ async function task () {
     const browser = await puppeteer.launch({headless: false})
     const page = await browser.newPage()
     await page.goto(URL)
-    await page.screenshot({path: "cool.png"})
 
     await page.select('.input-validation-error', '350')
     await page.type('#LogOnDetails_UserName', username)
